@@ -8,7 +8,11 @@ LifeLayer is a tactical Android productivity app that turns your wallpaper into 
 
 ## Screenshots
 
-> *(Add screenshots of the main screen, live wallpaper, and mission cards here)*
+> <p align="center">
+  <img src="screenshots/LoginScreen.png" width="250"/>
+  <img src="screenshots/ChatScreen.png" width="250"/>
+  <img src="screenshots/HomeScreen.png" width="250"/>
+</p>
 
 ---
 
