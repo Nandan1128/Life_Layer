@@ -584,7 +584,7 @@ fun GoalClockArc(current: Int, total: Int) {
             // 4. Indicator dot at the leading edge of progress
             if (animatedProgress > 0f) {
                 val angleRad = Math.toRadians((140f + 260f * animatedProgress).toDouble())
-                val radius = (size.width - strokeWidthFg) / 2f
+                val radius = size.width / 2f
                 val centerX = size.width / 2f
                 val centerY = size.height / 2f
                 val dotX = centerX + radius * Math.cos(angleRad).toFloat()
