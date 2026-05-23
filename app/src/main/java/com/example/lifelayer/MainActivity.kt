@@ -80,6 +80,7 @@ import androidx.core.content.ContextCompat
 import com.example.lifelayer.data.MissionEntity
 import com.example.lifelayer.service.MoriWallpaperService
 import com.example.lifelayer.ui.MainViewModel
+import com.example.lifelayer.ui.SplashScreen
 import com.example.lifelayer.ui.theme.*
 import java.io.File
 import java.io.FileOutputStream
@@ -95,7 +96,18 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LifeLayerTheme {
-                MainScreen(viewModel)
+                var showSplash by remember { mutableStateOf(true) }
+                Crossfade(
+                    targetState = showSplash,
+                    animationSpec = tween(durationMillis = 800, easing = FastOutSlowInEasing),
+                    label = "SplashToMainTransition"
+                ) { isSplash ->
+                    if (isSplash) {
+                        SplashScreen(onSplashFinished = { showSplash = false })
+                    } else {
+                        MainScreen(viewModel)
+                    }
+                }
             }
         }
     }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme override for Android 12 (API 31) and higher to customize/hide the system splash screen -->
+    <style name="Theme.LifeLayer" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowSplashScreenBackground">#0C0C12</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+    </style>
+</resources>
